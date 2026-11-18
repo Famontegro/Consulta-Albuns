@@ -131,32 +131,33 @@ void carregar(){
 }
 
 int ordenar(const void *a, const void *b){
-    const Album *x = a, *y = b;
+    const Album x = *(Album *)a;
+    const Album y = *(Album *)b;
 
     if (ordem == 0)
-        return comparar(x->nome, y->nome);
+        return comparar(x.nome, y.nome);
 
-    if(x->views < 0){
-        if(y->views < 0)
-            return comparar(x->nome, y->nome);
+    if(x.views < 0){
+        if(y.views < 0)
+            return comparar(x.nome, y.nome);
         else
             return 1;
     }
 
-    if(y->views < 0) 
+    if(y.views < 0)
         return -1;
 
-    if(x->views == y->views)
-        return comparar(x->nome, y->nome);
+    if(x.views == y.views)
+        return comparar(x.nome, y.nome);
 
     if(ordem == 1){
-        if(x->views < y->views)
+        if(x.views < y.views)
             return 1;
         else
             return -1;
     }
 
-    if(x->views > y->views)
+    if(x.views > y.views)
         return 1;
     else
         return -1;
@@ -349,12 +350,13 @@ int main(){
                 estatisticas(); 
                 break;
             case 0: 
-                printf("Encerrando...\n"); 
+                printf("Obrigado por utilizar nosso programa!\n"); 
                 break;
-            default: printf("Opcao invalida!\n");
+            default: 
+                printf("Opcao invalida!\n");
         }
 
-    }while (opcao != 0);
+    }while(opcao != 0);
 
     return 0;
 }
