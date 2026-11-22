@@ -8,11 +8,11 @@
 #define CAMPO 12000
 #define LINHA 30000
 
-typedef struct {
+typedef struct{
     char nome[300], banda[300], genero[200], link[1000];
     int musicas, duracao, ano;
     long long views;
-} Album;
+}Album;
 
 Album albuns[MAX], copia[MAX];
 int qtd = 0, ordem;
@@ -27,7 +27,6 @@ int lerCSV(char *linha, char campos[][CAMPO]){
             if(aspas && linha[i + 1] == '"'){
                 campos[c][p++] = '"';
                 i++;
-
             }else 
                 aspas = !aspas;
         }else if(ch == ';' && !aspas){
@@ -38,7 +37,7 @@ int lerCSV(char *linha, char campos[][CAMPO]){
                 return -1;
 
         }else if(ch != '\r' && ch != '\n'){
-            if(p < CAMPO - 1) 
+            if(p < CAMPO - 1)
                 campos[c][p++] = ch;
         }
     }
@@ -91,10 +90,10 @@ int buscarTexto(char *texto, char *busca){
 }
 
 void carregar(){
-    FILE *f = fopen("albuns_preenchidos.csv", "r");
+    FILE *f = fopen("Albums.txt", "r");
 
     if(!f){
-        printf("Erro ao abrir CSV!\n");
+        printf("Erro ao abrir arquivo TXT!\n");
         return;
     }
 
