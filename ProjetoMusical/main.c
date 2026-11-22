@@ -350,7 +350,7 @@ int main(){
                 estatisticas(); 
                 break;
             case 0: 
-                printf("Obrigado por utilizar nosso programa!\n"); 
+                printf("\nObrigado por utilizar nosso programa!\n"); 
                 break;
             default: 
                 printf("Opcao invalida!\n");
