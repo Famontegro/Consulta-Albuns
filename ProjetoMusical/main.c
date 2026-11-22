@@ -4,9 +4,9 @@
 #include <string.h>
 #include <ctype.h>
 
-#define MAX 1000
-#define CAMPO 12000
-#define LINHA 30000
+#define MAX 200
+#define CAMPO 2000
+#define LINHA 5000
 
 typedef struct{
     char nome[300], banda[300], genero[200], link[1000];
