@@ -96,7 +96,7 @@ int main(){
 
     fputs(cabecalho, saida);
 
-    if (cabecalho[strlen(cabecalho) - 1] != '\n')
+    if(cabecalho[strlen(cabecalho) - 1] != '\n')
         fprintf(saida, "\n");
 
     for(i=0; i < total; i++){

@@ -133,7 +133,7 @@ int ordenar(const void *a, const void *b){
     const Album x = *(Album *)a;
     const Album y = *(Album *)b;
 
-    if (ordem == 0)
+    if(ordem == 0)
         return comparar(x.nome, y.nome);
 
     if(x.views < 0){
@@ -167,7 +167,7 @@ void mostrar(Album a){
 
     printf("Musicas: %d | Duracao: %d min | Ano: %d\n", a.musicas, a.duracao, a.ano);
 
-    if (a.views < 0) 
+    if(a.views < 0) 
         printf("Views: N/D\n");
     else 
         printf("Views: %lld\n", a.views);
