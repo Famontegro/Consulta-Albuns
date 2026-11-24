@@ -165,8 +165,7 @@ int ordenar(const void *a, const void *b){
 void mostrar(Album a){
     printf("\n%s | %s | %s\n", a.nome, a.banda, a.genero);
 
-    printf("Musicas: %d | Duracao: %d min | Ano: %d\n",
-           a.musicas, a.duracao, a.ano);
+    printf("Musicas: %d | Duracao: %d min | Ano: %d\n", a.musicas, a.duracao, a.ano);
 
     if (a.views < 0) 
         printf("Views: N/D\n");
