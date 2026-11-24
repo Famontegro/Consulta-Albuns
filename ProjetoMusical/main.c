@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -90,7 +89,7 @@ int buscarTexto(char *texto, char *busca){
 }
 
 void carregar(){
-    FILE *f = fopen("Albums.txt", "r");
+    FILE *f = fopen("Albums_embaralhados.txt", "r");
 
     if(!f){
         printf("Erro ao abrir arquivo TXT!\n");
