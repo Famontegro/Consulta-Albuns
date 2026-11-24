@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <locale.h>
 
 #define MAX 200
 #define CAMPO 2000
@@ -295,6 +296,8 @@ void estatisticas(){
 
 int main(){
     int opcao;
+    
+    setlocale(LC_ALL, "Portuguese");
 
     carregar();
 
